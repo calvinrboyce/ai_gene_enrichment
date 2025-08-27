@@ -13,7 +13,7 @@ Under the following terms:
 - **Attribution** — You must give appropriate credit and indicate if changes were made
 - **NonCommercial** — You may not use the material for commercial purposes
 
-For commercial licensing inquiries, please contact: calvin.boyce@harvard.edu
+For commercial licensing inquiries, please contact: cboyce3@mgh.harvard.edu
 
 ## Installation
 
