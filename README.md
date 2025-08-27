@@ -2,12 +2,33 @@
 
 A comprehensive Python package for performing gene enrichment analysis using multiple bioinformatics tools and AI-powered synthesis. This tool integrates Enrichr, ToppFun, gProfiler, literature search, and AI summarization to provide detailed biological insights from gene lists.
 
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC 4.0). This means you are free to:
+
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit and indicate if changes were made
+- **NonCommercial** — You may not use the material for commercial purposes
+
+For commercial licensing inquiries, please contact: calvin.boyce@harvard.edu
+
 ## Installation
+
+### From PyPI (Recommended)
+
+```bash
+pip install ai-gene-enrichment
+```
+
+### From Source
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/calvinrboyce/gene_enrichment_agent.git
-   cd gene_enrichment_agent
+   git clone https://github.com/calvinrboyce/ai-gene-enrichment.git
+   cd ai-gene-enrichment
    ```
 
 2. Create and activate a virtual environment:
@@ -16,9 +37,9 @@ A comprehensive Python package for performing gene enrichment analysis using mul
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. Install dependencies:
+3. Install in development mode:
    ```bash
-   pip install -r requirements.txt
+   pip install -e .
    ```
 
 4. Set up your OpenAI API key:
@@ -35,7 +56,7 @@ AI synthesis requires an API key to access OpenAI's models. API keys can be obta
 ```python
 import os
 import dotenv
-from ai_gene_enrichment import AIGeneEnrichment
+from aige import AIGeneEnrichment
 
 # Load environment variables
 dotenv.load_dotenv()
@@ -105,6 +126,8 @@ The agent supports custom background gene sets for enrichment analysis, which ca
 - **ToppFun**: Currently uses default background (background genes not yet supported)
 
 **Note**: When no background genes are provided (empty list), the tools use their default reference sets.
+
+
 
 ### Working with Results
 

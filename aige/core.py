@@ -1,13 +1,14 @@
-"""Gene enrichment analysis workflow."""
+"""Core AIGeneEnrichment class and functionality."""
 
 import os
 import re
 from typing import List, Dict
 from datetime import datetime
 
-from src.enrichment_tools import ToppFunAnalyzer, GProfilerAnalyzer, EnrichrAnalyzer
-from src.literature import LiteratureAnalyzer
-from src.summarize import SummarizeAnalyzer
+from .enrichment_tools import ToppFunAnalyzer, GProfilerAnalyzer, EnrichrAnalyzer
+from .literature import LiteratureAnalyzer
+from .summarize import SummarizeAnalyzer
+
 
 class AIGeneEnrichment:
     """Main agent for running gene enrichment analysis workflow."""
@@ -22,6 +23,7 @@ class AIGeneEnrichment:
                  terms_per_source: int = 20,
                  num_papers: int = 20):
         """Initialize the agent with necessary tools and setup.
+        
         Args:
             open_ai_api_key: OpenAI API key
             open_ai_model: OpenAI model to use
@@ -44,12 +46,13 @@ class AIGeneEnrichment:
                      genes: List[str],
                      email: str,
                      background_genes: List[str] = [],
-                     ranked: bool=True,
+                     ranked: bool = True,
                      search_terms: List[str] = [],
                      context: str = "None",
                      save_results: bool = True,
                      analysis_name: str = None):
         """Run the complete analysis workflow.
+        
         Args:
             genes: List of gene symbols to analyze
             email: Email address for NCBI's reference
